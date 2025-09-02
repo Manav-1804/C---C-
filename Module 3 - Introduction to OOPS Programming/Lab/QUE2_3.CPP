@@ -1,0 +1,40 @@
+#include <iostream.h>
+#include <conio.h>
+
+void main() {
+    clrscr();
+
+    int a = 10, b = 5;
+
+
+    cout << "Arithmetic Operators:" << endl;
+    cout << "a + b = " << (a + b) << endl;
+    cout << "a - b = " << (a - b) << endl;
+    cout << "a * b = " << (a * b) << endl;
+    cout << "a / b = " << (a / b) << endl;
+    cout << "a % b = " << (a % b) << endl << endl;
+
+ 
+    cout << "Relational Operators:" << endl;
+    cout << "a == b: " << (a == b) << endl;
+    cout << "a != b: " << (a != b) << endl;
+    cout << "a > b: " << (a > b) << endl;
+    cout << "a < b: " << (a < b) << endl;
+    cout << "a >= b: " << (a >= b) << endl;
+    cout << "a <= b: " << (a <= b) << endl << endl;
+
+        cout << "Logical Operators:" << endl;
+    cout << "(a > 5 && b < 10): " << ((a > 5) && (b < 10)) << endl;
+    cout << "(a > 5 || b > 10): " << ((a > 5) || (b > 10)) << endl;
+    cout << "!(a == b): " << (!(a == b)) << endl << endl;
+
+    
+    cout << "Bitwise Operators:" << endl;
+    cout << "a & b = " << (a & b) << endl;
+    cout << "a | b = " << (a | b) << endl;
+    cout << "a ^ b = " << (a ^ b) << endl;
+    cout << "a << 1 = " << (a << 1) << endl;
+    cout << "a >> 1 = " << (a >> 1) << endl;
+
+    getch();
+}
