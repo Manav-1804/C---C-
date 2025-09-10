@@ -1,33 +1,51 @@
-#inlcude<iostream.h>
-#inlcude<conio.h>
+#include <iostream.h>
+#include <conio.h>
 
+class BankAccount {
+private:
+    float balance;   // private data member
 
-void counterChars(char str[])
-{
-	int vowel =0, consonatns = 0, digit = 0, special = 0;
+public:
+    // constructor
+    BankAccount() {
+        balance = 0;
+    }
 
-	for (int i = 0; str[i] != '\0'; i++)
-	{
-		char ch = str[i];
-		if((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z'))
-		{
-			if(ch=='a' || ch=='e' || ch=='i' || ch=='o' || ch=='u' || ch=='A' || ch=='E' || ch=='I' || ch=='O' || ch== 'U')
-			 {
-				vowels++;
-			 }
-			 else
-			 {
-				consonants++;
-			 }
-		}
-		else if (ch >= '0' && ch <= '9')
-		{
-			digits++;
-		}
-		else
-		{
-			special++;
-		}
-	}
+    // deposit function
+    void deposit(float amount) {
+        if (amount > 0) {
+            balance += amount;
+            cout << "\nAmount Deposited: " << amount;
+        } else {
+            cout << "\nInvalid deposit amount!";
+        }
+    }
 
-	cout << "\n Vowels : << vowels
+    // withdraw function
+    void withdraw(float amount) {
+        if (amount > 0 && amount <= balance) {
+            balance -= amount;
+            cout << "\nAmount Withdrawn: " << amount;
+        } else {
+            cout << "\nInsufficient Balance or Invalid Amount!";
+        }
+    }
+
+    // display balance
+    void showBalance() {
+        cout << "\nCurrent Balance: " << balance;
+    }
+};
+
+void main() {
+    clrscr();
+
+    BankAccount acc;
+    acc.deposit(1000);
+    acc.showBalance();
+    acc.withdraw(400);
+    acc.showBalance();
+    acc.withdraw(700);
+
+    getch();
+}
